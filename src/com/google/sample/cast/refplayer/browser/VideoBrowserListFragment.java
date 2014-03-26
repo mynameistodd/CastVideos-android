@@ -34,9 +34,10 @@ import java.util.List;
 public class VideoBrowserListFragment extends ListFragment implements
         LoaderManager.LoaderCallbacks<List<MediaInfo>> {
 
-    private static final String CATALOG_URL =
-            "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/" +
-                    "videos-enhanced-b.json";
+//    private static final String CATALOG_URL =
+//            "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/" +
+//                    "videos-enhanced-b.json";
+    private static final String CATALOG_URL = "https://googledrive.com/host/0B48EVuYwbtBERUtoUEN2eVFaUjA/wineshow.json";
     private VideoListAdapter mAdapter;
 
     /*

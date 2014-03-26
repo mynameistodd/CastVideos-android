@@ -89,31 +89,47 @@ public class VideoProvider {
         }
         mediaList = new ArrayList<MediaInfo>();
         JSONObject jsonObj = new VideoProvider().parseUrl(url);
-        JSONArray categories = jsonObj.getJSONArray(TAG_CATEGORIES);
-        if (null != categories) {
-            for (int i = 0; i < categories.length(); i++) {
-                JSONObject category = categories.getJSONObject(i);
-                category.getString(TAG_NAME);
-                JSONArray videos = category.getJSONArray(getJsonMediaTag());
-                if (null != videos) {
-                    for (int j = 0; j < videos.length(); j++) {
-                        JSONObject video = videos.getJSONObject(j);
-                        String subTitle = video.getString(TAG_SUBTITLE);
-                        JSONArray videoUrls = video.getJSONArray(TAG_SOURCES);
-                        if (null == videoUrls || videoUrls.length() == 0) {
-                            continue;
-                        }
-                        String videoUrl = videoUrls.getString(0);
-                        String imageurl = getThumbPrefix() + video.getString(TAG_THUMB);
-                        String bigImageurl = getThumbPrefix() + video.getString(TAG_IMG_780_1200);
-                        String title = video.getString(TAG_TITLE);
-                        String studio = video.getString(TAG_STUDIO);
-                        mediaList.add(buildMediaInfo(title, studio, subTitle, videoUrl, imageurl,
-                                bigImageurl));
-                    }
-                }
+        JSONArray episodes = jsonObj.getJSONArray("episode");
+        if (episodes != null) {
+            for (int i = 0; i < episodes.length(); i++) {
+                JSONObject episode = episodes.getJSONObject(i);
+
+                String subTitle = episode.getString("episodeDes");
+                String videoUrl = episode.getString("videoURL");
+                String imageurl = episode.getString("episodeImg");
+                String bigImageurl = episode.getString("episodeImg");
+                String title = episode.getString("episodeTitle");
+                String studio = "Omniburst";
+                mediaList.add(buildMediaInfo(title, studio, subTitle, videoUrl, imageurl,
+                        bigImageurl));
             }
         }
+
+//        JSONArray categories = jsonObj.getJSONArray(TAG_CATEGORIES);
+//        if (null != categories) {
+//            for (int i = 0; i < categories.length(); i++) {
+//                JSONObject category = categories.getJSONObject(i);
+//                category.getString(TAG_NAME);
+//                JSONArray videos = category.getJSONArray(getJsonMediaTag());
+//                if (null != videos) {
+//                    for (int j = 0; j < videos.length(); j++) {
+//                        JSONObject video = videos.getJSONObject(j);
+//                        String subTitle = video.getString(TAG_SUBTITLE);
+//                        JSONArray videoUrls = video.getJSONArray(TAG_SOURCES);
+//                        if (null == videoUrls || videoUrls.length() == 0) {
+//                            continue;
+//                        }
+//                        String videoUrl = videoUrls.getString(0);
+//                        String imageurl = getThumbPrefix() + video.getString(TAG_THUMB);
+//                        String bigImageurl = getThumbPrefix() + video.getString(TAG_IMG_780_1200);
+//                        String title = video.getString(TAG_TITLE);
+//                        String studio = video.getString(TAG_STUDIO);
+//                        mediaList.add(buildMediaInfo(title, studio, subTitle, videoUrl, imageurl,
+//                                bigImageurl));
+//                    }
+//                }
+//            }
+//        }
         return mediaList;
     }
 
