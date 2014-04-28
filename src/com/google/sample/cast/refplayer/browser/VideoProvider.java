@@ -34,6 +34,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URLConnection;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class VideoProvider {
@@ -99,7 +100,7 @@ public class VideoProvider {
                 String imageurl = episode.getString("episodeImg");
                 String bigImageurl = episode.getString("episodeImg");
                 String title = episode.getString("episodeTitle");
-                String studio = "Omniburst";
+                String studio = episode.getString("episodeShow");
                 mediaList.add(buildMediaInfo(title, studio, subTitle, videoUrl, imageurl,
                         bigImageurl));
             }
@@ -130,6 +131,7 @@ public class VideoProvider {
 //                }
 //            }
 //        }
+        Collections.reverse(mediaList);
         return mediaList;
     }
 

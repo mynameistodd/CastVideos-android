@@ -19,7 +19,7 @@
     <string name="unmute">Unmute</string>
     <string name="loading">Loading&#8230;</string>
     <string name="no_video_found">No video was found</string>
-    <string name="about_app">About DemoCast Player</string>
+    <string name="about_app">About WineCast Player</string>
     <string name="version">Version: %1$s</string>
     <string name="session_reconnection_attempt">Attempting to recover previous session&#8230;</string>
 
