@@ -16,12 +16,6 @@
 
 package com.google.sample.cast.refplayer;
 
-import com.google.sample.cast.refplayer.settings.CastPreference;
-import com.google.sample.castcompanionlibrary.cast.VideoCastManager;
-import com.google.sample.castcompanionlibrary.cast.callbacks.IVideoCastConsumer;
-import com.google.sample.castcompanionlibrary.cast.callbacks.VideoCastConsumerImpl;
-import com.google.sample.castcompanionlibrary.widgets.MiniController;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -32,6 +26,12 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.google.sample.cast.refplayer.settings.CastPreference;
+import com.google.sample.castcompanionlibrary.cast.VideoCastManager;
+import com.google.sample.castcompanionlibrary.cast.callbacks.IVideoCastConsumer;
+import com.google.sample.castcompanionlibrary.cast.callbacks.VideoCastConsumerImpl;
+import com.google.sample.castcompanionlibrary.widgets.MiniController;
 
 public class VideoBrowserActivity extends ActionBarActivity {
 
@@ -104,7 +104,7 @@ public class VideoBrowserActivity extends ActionBarActivity {
 
     private void setupActionBar(ActionBar actionBar) {
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
-        getSupportActionBar().setIcon(R.drawable.actionbar_logo_castvideos);
+        getSupportActionBar().setIcon(R.drawable.actionbar_winechannellogo);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
     }
 
