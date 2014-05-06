@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>APPTENTIVE_ID</key>
+	<string>8aa1fce2fbe296f5dabad10da5241b022ee68dfc9dbac27082c3f5ec64bed34d</string>
+	<key>APP_ID</key>
+	<string>692585801</string>
+	<key>APP_LOGO_IMAGE_NAME</key>
+	<string>winechannellogo.png</string>
+	<key>APP_NAME_SOCIAL_NETWORK</key>
+	<string>Wine Channel TV Mobile</string>
+	<key>APP_XML_SOURCE</key>
+	<string>https://s3.amazonaws.com/vodfeed/wctvvodfeedv1.2.xml</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>${PRODUCT_NAME}</string>
+	<key>CFBundleExecutable</key>
+	<string>${EXECUTABLE_NAME}</string>
+	<key>CFBundleIcons</key>
+	<dict>
+		<key>CFBundlePrimaryIcon</key>
+		<dict>
+			<key>CFBundleIconFiles</key>
+			<array>
+				<string>wctvicon114iPh5iPh4HD.png</string>
+				<string>wctvicon57iPh4.png</string>
+				<string>wctvicon144iPadHD.png</string>
+				<string>wctvicon72iPad.png</string>
+			</array>
+			<key>UIPrerenderedIcon</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>CFBundleIdentifier</key>
+	<string>com.omniburst.winetv</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>${PRODUCT_NAME}</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.1</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>2</string>
+	<key>GOOGLE_ANALYTICS_ID</key>
+	<string>UA-42535224-3</string>
+	<key>IN_PRODUCTION</key>
+	<true/>
+	<key>IPAD_BUTTON_SELECTION_RGB</key>
+	<string>160 160 160</string>
+	<key>IPAD_OPTION_IMAGE_NAME</key>
+	<string>speechbubbleBlack.png</string>
+	<key>IPAD_SETTING_TEXT_RGB</key>
+	<string>255 255 255</string>
+	<key>IPAD_SETTING_THEME_RGB</key>
+	<string>80 80 80</string>
+	<key>IPAD_SPLASH_LANDSCAPE</key>
+	<string>Default-Landscape@2x~ipad.png</string>
+	<key>IPHONE_OPTION_IMAGE_NAME</key>
+	<string>MoreOptionsImgBlack.png</string>
+	<key>IPHONE_SPLASH_LANDSCAPE</key>
+	<string>iPhone_Splash_Landscape.png</string>
+	<key>IPHONE_SPLASH_LANDSCAPE_568</key>
+	<string>iPhone_Splash_Landscape_568.png</string>
+	<key>IPHONE_SPLASH_PORTRAIT</key>
+	<string>Default@2x.png</string>
+	<key>IPHONE_SPLASH_PORTRAIT_568</key>
+	<string>Default-568h@2x.png</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>MILLENNIAL_APP_ID</key>
+	<string>126969</string>
+	<key>MILLENNIAL_IPHONE_APP_ID</key>
+	<string>161269</string>
+	<key>TEXT_COLOR_RGB</key>
+	<string>0 0 0</string>
+	<key>THEME_COLOR_RGB</key>
+	<string>255 255 255</string>
+	<key>UIMainStoryboardFile</key>
+	<string>MainStoryboard_iPhone</string>
+	<key>UIMainStoryboardFile~ipad</key>
+	<string>MainStoryboard_iPad</string>
+	<key>UIPrerenderedIcon</key>
+	<true/>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>URBAN_AIRSHIP_DEV_APP_KEY</key>
+	<string>L6yI7rxcSAOU6L-wQz5LAA</string>
+	<key>URBAN_AIRSHIP_DEV_APP_SECRET</key>
+	<string>NeexUTbgSo6_9RmnMgZMJQ</string>
+	<key>URBAN_AIRSHIP_PROD_APP_KEY</key>
+	<string>z-AUBnlGQw-fbFIepyJc9g</string>
+	<key>URBAN_AIRSHIP_PROD_APP_SECRET</key>
+	<string>mXgk67VlRVClKdHRIhQajw</string>
+</dict>
+</plist>
