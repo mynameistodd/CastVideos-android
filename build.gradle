@@ -15,7 +15,7 @@ apply plugin: 'android'
 
 android {
     compileSdkVersion 19
-    buildToolsVersion "19"
+    buildToolsVersion '19'
 
     defaultConfig {
         minSdkVersion 10
@@ -36,6 +36,7 @@ android {
 }
 
 dependencies {
-    compile files('libs/android-query.0.25.10.jar')
+    compile files('libs/android-query.0.25.10.jar', 'libs/json-20140107.jar')
     compile project(':..:CastCompanionLibrary')
+//    compile 'org.json:json:20140107@jar'
 }

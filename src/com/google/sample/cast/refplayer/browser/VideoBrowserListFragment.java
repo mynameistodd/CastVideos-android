@@ -16,11 +16,6 @@
 
 package com.google.sample.cast.refplayer.browser;
 
-import com.google.android.gms.cast.MediaInfo;
-import com.google.sample.cast.refplayer.R;
-import com.google.sample.cast.refplayer.mediaplayer.LocalPlayerActivity;
-import com.google.sample.castcompanionlibrary.utils.Utils;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
@@ -29,15 +24,20 @@ import android.support.v4.content.Loader;
 import android.view.View;
 import android.widget.ListView;
 
+import com.google.android.gms.cast.MediaInfo;
+import com.google.sample.cast.refplayer.R;
+import com.google.sample.cast.refplayer.mediaplayer.LocalPlayerActivity;
+import com.google.sample.castcompanionlibrary.utils.Utils;
+
 import java.util.List;
 
 public class VideoBrowserListFragment extends ListFragment implements
         LoaderManager.LoaderCallbacks<List<MediaInfo>> {
 
-//    private static final String CATALOG_URL =
+    //    private static final String CATALOG_URL =
 //            "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/" +
 //                    "videos-enhanced-b.json";
-    private static final String CATALOG_URL = "https://googledrive.com/host/0B48EVuYwbtBERUtoUEN2eVFaUjA/wineshow.json";
+    //private static final String CATALOG_URL = "https://googledrive.com/host/0B48EVuYwbtBERUtoUEN2eVFaUjA/wineshow.json";
     private VideoListAdapter mAdapter;
 
     /*
@@ -100,6 +100,7 @@ public class VideoBrowserListFragment extends ListFragment implements
      */
     @Override
     public Loader<List<MediaInfo>> onCreateLoader(int arg0, Bundle arg1) {
+        String CATALOG_URL = getString(R.string.app_xml_source);
         return new VideoItemLoader(getActivity(), CATALOG_URL);
     }
 

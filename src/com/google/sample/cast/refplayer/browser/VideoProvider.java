@@ -26,6 +26,7 @@ import com.google.android.gms.common.images.WebImage;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.json.XML;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
@@ -67,8 +68,9 @@ public class VideoProvider {
             while ((line = reader.readLine()) != null) {
                 sb.append(line);
             }
-            String json = sb.toString();
-            return new JSONObject(json);
+            String xml = sb.toString();
+            JSONObject obj = XML.toJSONObject(xml);
+            return obj;
         } catch (Exception e) {
             Log.d(TAG, "Failed to parse the json for media list", e);
             return null;
@@ -90,7 +92,8 @@ public class VideoProvider {
         }
         mediaList = new ArrayList<MediaInfo>();
         JSONObject jsonObj = new VideoProvider().parseUrl(url);
-        JSONArray episodes = jsonObj.getJSONArray("episode");
+        JSONObject wineSpotTVAppData = jsonObj.getJSONObject("WineSpotTVAppData");
+        JSONArray episodes = wineSpotTVAppData.getJSONArray("episode");
         if (episodes != null) {
             for (int i = 0; i < episodes.length(); i++) {
                 JSONObject episode = episodes.getJSONObject(i);
