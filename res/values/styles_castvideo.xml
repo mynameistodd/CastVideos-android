@@ -26,7 +26,7 @@
         <item name="dropDownListViewStyle">@style/DropDownListView.Castvideo</item>
         <item name="actionBarTabStyle">@style/ActionBarTabStyle.Castvideo</item>
         <item name="actionDropDownStyle">@style/DropDownNav.Castvideo</item>
-        <item name="actionBarStyle">@style/ActionBar.Solid.Castvideo</item>
+        <item name="actionBarStyle">@style/ActionBar.Transparent.Castvideo</item>
         <item name="actionModeBackground">@drawable/cab_background_top_castvideo</item>
         <item name="actionModeSplitBackground">@drawable/cab_background_bottom_castvideo</item>
         <item name="actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Castvideo</item>
