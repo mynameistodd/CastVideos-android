@@ -16,21 +16,27 @@
 
 package com.google.sample.cast.refplayer;
 
+import android.app.Application;
+import android.content.Context;
+
+import com.google.android.gms.analytics.GoogleAnalytics;
+import com.google.android.gms.analytics.Tracker;
 import com.google.sample.cast.refplayer.settings.CastPreference;
 import com.google.sample.castcompanionlibrary.cast.VideoCastManager;
 import com.google.sample.castcompanionlibrary.utils.Utils;
 
-import android.app.Application;
-import android.content.Context;
+import java.util.HashMap;
 
 /**
  * The {@link Application} for this demo application.
  */
 public class CastApplication extends Application {
+    private static String PROPERTY_ID;
     private static String APPLICATION_ID;
     private static VideoCastManager mCastMgr = null;
     public static final double VOLUME_INCREMENT = 0.05;
     private static Context mAppContext;
+    HashMap<TrackerName, Tracker> mTrackers = new HashMap<TrackerName, Tracker>();
 
     /*
      * (non-Javadoc)
@@ -41,6 +47,7 @@ public class CastApplication extends Application {
         super.onCreate();
         mAppContext = getApplicationContext();
         APPLICATION_ID = getString(R.string.app_id);
+        PROPERTY_ID = getString(R.string.ga_trackingId);
         Utils.saveFloatToPreference(getApplicationContext(),
                 VideoCastManager.PREFS_KEY_VOLUME_INCREMENT, (float) VOLUME_INCREMENT);
 
@@ -64,4 +71,23 @@ public class CastApplication extends Application {
         return mCastMgr;
     }
 
+    public synchronized Tracker getTracker(TrackerName trackerId) {
+        if (!mTrackers.containsKey(trackerId)) {
+
+            GoogleAnalytics analytics = GoogleAnalytics.getInstance(this);
+            Tracker t = (trackerId == TrackerName.APP_TRACKER) ? analytics.newTracker(R.xml.app_tracker)
+                    : analytics.newTracker(PROPERTY_ID);
+//            Tracker t = (trackerId == TrackerName.APP_TRACKER) ? analytics.newTracker(PROPERTY_ID)
+//                    : (trackerId == TrackerName.GLOBAL_TRACKER) ? analytics.newTracker(R.xml.global_tracker)
+//                    : analytics.newTracker(R.xml.ecommerce_tracker);
+            mTrackers.put(trackerId, t);
+        }
+        return mTrackers.get(trackerId);
+    }
+
+    public enum TrackerName {
+        APP_TRACKER, // Tracker used only in this app.
+//        GLOBAL_TRACKER, // Tracker used by all the apps from a company. eg: roll-up tracking.
+//        ECOMMERCE_TRACKER, // Tracker used by all ecommerce transactions from a company.
+    }
 }

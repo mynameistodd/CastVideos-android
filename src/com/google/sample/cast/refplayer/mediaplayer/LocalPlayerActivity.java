@@ -48,6 +48,8 @@ import android.widget.TextView;
 import android.widget.VideoView;
 
 import com.androidquery.AQuery;
+import com.google.android.gms.analytics.HitBuilders;
+import com.google.android.gms.analytics.Tracker;
 import com.google.android.gms.cast.ApplicationMetadata;
 import com.google.android.gms.cast.MediaInfo;
 import com.google.android.gms.cast.MediaMetadata;
@@ -428,6 +430,11 @@ public class LocalPlayerActivity extends ActionBarActivity {
         mCastManager = CastApplication.getCastManager(this);
         mCastManager.addVideoCastConsumer(mCastConsumer);
         mCastManager.incrementUiCounter();
+
+        Tracker t = ((CastApplication) getApplication()).getTracker(CastApplication.TrackerName.APP_TRACKER);
+        t.setScreenName(TAG);
+        t.send(new HitBuilders.AppViewBuilder().build());
+
         super.onResume();
     }
 

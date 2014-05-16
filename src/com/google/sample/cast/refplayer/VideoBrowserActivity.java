@@ -27,6 +27,9 @@ import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.google.android.gms.analytics.HitBuilders;
+import com.google.android.gms.analytics.Tracker;
+import com.google.sample.cast.refplayer.CastApplication.TrackerName;
 import com.google.sample.cast.refplayer.settings.CastPreference;
 import com.google.sample.castcompanionlibrary.cast.VideoCastManager;
 import com.google.sample.castcompanionlibrary.cast.callbacks.IVideoCastConsumer;
@@ -167,6 +170,10 @@ public class VideoBrowserActivity extends ActionBarActivity {
             mCastManager.addVideoCastConsumer(mCastConsumer);
             mCastManager.incrementUiCounter();
         }
+
+        Tracker t = ((CastApplication) getApplication()).getTracker(TrackerName.APP_TRACKER);
+        t.setScreenName(TAG);
+        t.send(new HitBuilders.AppViewBuilder().build());
 
         super.onResume();
     }
