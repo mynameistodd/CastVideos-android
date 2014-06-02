@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent">
 
     <fragment
         android:id="@+id/browse"
@@ -9,7 +9,7 @@
         android:layout_height="match_parent"
         android:layout_above="@+id/miniController1"
         android:layout_marginBottom="-5dp"
-        class="com.google.sample.cast.refplayer.browser.VideoBrowserListFragment" />
+        class="com.omniburst.winetv.android.browser.VideoBrowserListFragment" />
 
     <com.google.sample.castcompanionlibrary.widgets.MiniController
         android:id="@+id/miniController1"
@@ -17,7 +17,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="@drawable/shadow7"
-        android:visibility="gone" >
-    </com.google.sample.castcompanionlibrary.widgets.MiniController>
+        android:visibility="gone"></com.google.sample.castcompanionlibrary.widgets.MiniController>
 
 </RelativeLayout>

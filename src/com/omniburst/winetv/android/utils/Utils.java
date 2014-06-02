@@ -14,12 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.sample.cast.refplayer.utils;
-
-import com.google.sample.cast.refplayer.R;
-import com.google.sample.castcompanionlibrary.cast.exceptions.CastException;
-import com.google.sample.castcompanionlibrary.cast.exceptions.NoConnectionException;
-import com.google.sample.castcompanionlibrary.cast.exceptions.TransientNetworkDisconnectionException;
+package com.omniburst.winetv.android.utils;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -29,6 +24,11 @@ import android.graphics.Point;
 import android.view.Display;
 import android.view.WindowManager;
 import android.widget.Toast;
+
+import com.google.sample.castcompanionlibrary.cast.exceptions.CastException;
+import com.google.sample.castcompanionlibrary.cast.exceptions.NoConnectionException;
+import com.google.sample.castcompanionlibrary.cast.exceptions.TransientNetworkDisconnectionException;
+import com.omniburst.winetv.android.R;
 
 import java.io.IOException;
 
@@ -151,7 +151,7 @@ public class Utils {
             resourceId = R.string.failed_to_perfrom_action;
         }
         if (resourceId > 0) {
-            com.google.sample.cast.refplayer.utils.Utils.showOopsDialog(context, resourceId);
+            com.omniburst.winetv.android.utils.Utils.showOopsDialog(context, resourceId);
         }
     }
 

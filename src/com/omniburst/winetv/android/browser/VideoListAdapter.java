@@ -14,12 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.sample.cast.refplayer.browser;
-
-import com.androidquery.AQuery;
-import com.google.android.gms.cast.MediaInfo;
-import com.google.android.gms.cast.MediaMetadata;
-import com.google.sample.cast.refplayer.R;
+package com.omniburst.winetv.android.browser;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -28,6 +23,11 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.androidquery.AQuery;
+import com.google.android.gms.cast.MediaInfo;
+import com.google.android.gms.cast.MediaMetadata;
+import com.omniburst.winetv.android.R;
 
 import java.util.List;
 

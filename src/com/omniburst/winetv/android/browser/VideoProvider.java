@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.sample.cast.refplayer.browser;
+package com.omniburst.winetv.android.browser;
 
 import android.net.Uri;
 import android.util.Log;
@@ -139,7 +139,7 @@ public class VideoProvider {
     }
 
     private static MediaInfo buildMediaInfo(String title,
-            String subTitle, String studio, String url, String imgUrl, String bigImageUrl) {
+                                            String subTitle, String studio, String url, String imgUrl, String bigImageUrl) {
         MediaMetadata movieMetadata = new MediaMetadata(MediaMetadata.MEDIA_TYPE_MOVIE);
 
         movieMetadata.putString(MediaMetadata.KEY_SUBTITLE, subTitle);

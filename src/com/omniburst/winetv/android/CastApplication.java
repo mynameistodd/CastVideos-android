@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package com.google.sample.cast.refplayer;
+package com.omniburst.winetv.android;
 
 import android.app.Application;
 import android.content.Context;
 
 import com.google.android.gms.analytics.GoogleAnalytics;
 import com.google.android.gms.analytics.Tracker;
-import com.google.sample.cast.refplayer.settings.CastPreference;
 import com.google.sample.castcompanionlibrary.cast.VideoCastManager;
 import com.google.sample.castcompanionlibrary.utils.Utils;
+import com.omniburst.winetv.android.settings.CastPreference;
 
 import java.util.HashMap;
 
@@ -60,7 +60,8 @@ public class CastApplication extends Application {
             mCastMgr.enableFeatures(
                     VideoCastManager.FEATURE_NOTIFICATION |
                             VideoCastManager.FEATURE_LOCKSCREEN |
-                            VideoCastManager.FEATURE_DEBUGGING);
+                            VideoCastManager.FEATURE_DEBUGGING
+            );
 
         }
         mCastMgr.setContext(context);

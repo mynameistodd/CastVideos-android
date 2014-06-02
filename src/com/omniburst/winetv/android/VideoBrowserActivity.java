@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.sample.cast.refplayer;
+package com.omniburst.winetv.android;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -29,12 +29,12 @@ import android.view.MenuItem;
 
 import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
-import com.google.sample.cast.refplayer.CastApplication.TrackerName;
-import com.google.sample.cast.refplayer.settings.CastPreference;
 import com.google.sample.castcompanionlibrary.cast.VideoCastManager;
 import com.google.sample.castcompanionlibrary.cast.callbacks.IVideoCastConsumer;
 import com.google.sample.castcompanionlibrary.cast.callbacks.VideoCastConsumerImpl;
 import com.google.sample.castcompanionlibrary.widgets.MiniController;
+import com.omniburst.winetv.android.CastApplication.TrackerName;
+import com.omniburst.winetv.android.settings.CastPreference;
 
 public class VideoBrowserActivity extends ActionBarActivity {
 
@@ -71,13 +71,13 @@ public class VideoBrowserActivity extends ActionBarActivity {
             @Override
             public void onConnectionSuspended(int cause) {
                 Log.d(TAG, "onConnectionSuspended() was called with cause: " + cause);
-                com.google.sample.cast.refplayer.utils.Utils.
+                com.omniburst.winetv.android.utils.Utils.
                         showToast(VideoBrowserActivity.this, R.string.connection_temp_lost);
             }
 
             @Override
             public void onConnectivityRecovered() {
-                com.google.sample.cast.refplayer.utils.Utils.
+                com.omniburst.winetv.android.utils.Utils.
                         showToast(VideoBrowserActivity.this, R.string.connection_recovered);
             }
 
@@ -158,7 +158,7 @@ public class VideoBrowserActivity extends ActionBarActivity {
             mCastManager.incrementVolume(volumeIncrement);
         } catch (Exception e) {
             Log.e(TAG, "onVolumeChange() Failed to change volume", e);
-            com.google.sample.cast.refplayer.utils.Utils.handleException(this, e);
+            com.omniburst.winetv.android.utils.Utils.handleException(this, e);
         }
     }
 

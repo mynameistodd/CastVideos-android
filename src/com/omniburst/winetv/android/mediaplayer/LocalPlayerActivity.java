@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.sample.cast.refplayer.mediaplayer;
+package com.omniburst.winetv.android.mediaplayer;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -53,13 +53,13 @@ import com.google.android.gms.analytics.Tracker;
 import com.google.android.gms.cast.ApplicationMetadata;
 import com.google.android.gms.cast.MediaInfo;
 import com.google.android.gms.cast.MediaMetadata;
-import com.google.sample.cast.refplayer.CastApplication;
-import com.google.sample.cast.refplayer.R;
-import com.google.sample.cast.refplayer.settings.CastPreference;
-import com.google.sample.cast.refplayer.utils.Utils;
 import com.google.sample.castcompanionlibrary.cast.VideoCastManager;
 import com.google.sample.castcompanionlibrary.cast.callbacks.VideoCastConsumerImpl;
 import com.google.sample.castcompanionlibrary.widgets.MiniController;
+import com.omniburst.winetv.android.CastApplication;
+import com.omniburst.winetv.android.R;
+import com.omniburst.winetv.android.settings.CastPreference;
+import com.omniburst.winetv.android.utils.Utils;
 
 import java.util.Timer;
 import java.util.TimerTask;

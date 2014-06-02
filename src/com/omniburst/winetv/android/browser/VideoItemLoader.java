@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.google.sample.cast.refplayer.browser;
-
-import com.google.android.gms.cast.MediaInfo;
+package com.omniburst.winetv.android.browser;
 
 import android.content.Context;
 import android.support.v4.content.AsyncTaskLoader;
 import android.util.Log;
+
+import com.google.android.gms.cast.MediaInfo;
 
 import java.util.List;
 

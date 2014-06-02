@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.sample.cast.refplayer.browser;
+package com.omniburst.winetv.android.browser;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -25,9 +25,9 @@ import android.view.View;
 import android.widget.ListView;
 
 import com.google.android.gms.cast.MediaInfo;
-import com.google.sample.cast.refplayer.R;
-import com.google.sample.cast.refplayer.mediaplayer.LocalPlayerActivity;
 import com.google.sample.castcompanionlibrary.utils.Utils;
+import com.omniburst.winetv.android.R;
+import com.omniburst.winetv.android.mediaplayer.LocalPlayerActivity;
 
 import java.util.List;
 
